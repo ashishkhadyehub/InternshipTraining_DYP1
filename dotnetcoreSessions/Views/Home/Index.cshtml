@@ -1,16 +1,18 @@
 ﻿@* @model int *@
 @* @model string *@
-@model Student
+@model List<Student>
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <ul>
-        <li>Roll No : @Model.ID</li>
-        <li>Name : @Model.Name</li>
-        <li>City : @Model.City</li>
-    </ul>
+    @foreach (var student in Model)
+    {
+        <h4>Roll No: @student.ID</h4>
+        <h4>Name: @student.Name</h4>
+        <h4>City: @student.City</h4>
+        <hr />
+    }
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
