@@ -18,5 +18,6 @@ namespace LA.Repositories.Interfaces
         void Save(District district);
 
         void RemoveData(District district);
+       
     }
 }
